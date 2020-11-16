@@ -54,11 +54,7 @@ public class SudokuSolver {
 	{
 		System.out.println("Sudoku Solver 2.1.0 Copyright 2020 Austin Garlick");
 		
-		
+		System.out.println("Test");
 	}
-
-	
-	
-	
 	
 }
