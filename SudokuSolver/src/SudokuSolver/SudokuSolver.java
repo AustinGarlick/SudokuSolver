@@ -13,7 +13,7 @@ public class SudokuSolver {
 	/*
 	 * Grid that will be solved, 0's are empty spaces
 	 */
-	int[][] grid = new int[][] { {5,3,0,0,7,0,0,0,0},
+	int[][] grid = new int[][] {             {5,3,0,0,7,0,0,0,0},
 	                   			 {6,0,0,1,9,5,0,0,0},
 	                   			 {0,9,8,0,0,0,0,6,0},
 	                   			 {8,0,0,0,6,0,0,0,3},
