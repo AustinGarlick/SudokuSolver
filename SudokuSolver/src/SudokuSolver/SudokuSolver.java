@@ -5,6 +5,7 @@ import java.util.StringJoiner;
 /*
  * This program solves a Sudoku Puzzle
  * given the user's change to the global grid variable
+ * It will return a all possible solutions
  */
 public class SudokuSolver {
 	
@@ -12,16 +13,18 @@ public class SudokuSolver {
 	 * Grid that will be solved, 0's are empty spaces
 	 */
 	static int[][] grid = new int[][] { {5,3,0,0,7,0,0,0,0},
-	                   			 {6,0,0,1,9,5,0,0,0},
-	                   			 {0,9,8,0,0,0,0,6,0},
-	                   			 {8,0,0,0,6,0,0,0,3},
-	                   			 {4,0,0,8,0,3,0,0,1},
-	                   			 {7,0,0,0,2,0,0,0,6},
-	                   			 {0,6,0,0,0,0,2,8,0},
-	                   			 {0,0,0,4,1,9,0,0,5},
-	                   			 {0,0,0,0,8,0,0,0,0} };
-	                   			 
-	                   	
+	                   			 		{6,0,0,1,9,5,0,0,0},
+	                   			 		{0,9,8,0,0,0,0,6,0},
+	                   			 		{8,0,0,0,6,0,0,0,3},
+	                   			 		{4,0,0,8,0,3,0,0,1},
+	                   			 		{7,0,0,0,2,0,0,0,6},
+	                   			 		{0,6,0,0,0,0,2,8,0},
+	                   			 		{0,0,0,4,1,9,0,0,5},
+	                   			 		{0,0,0,0,8,0,0,0,0} };
+	/*
+	 * Counter to tell which solution # it is                  			 
+	 */
+	static int count = 1;                   	
 	                   			 
 	/*
 	 * This method determines if the given number is
@@ -94,15 +97,11 @@ public class SudokuSolver {
 				}
 			}
 		}
-	}
-	
-	
-	public static void main(String[] args) 
-	{
-		System.out.println("Sudoku Solver 2.1.0 Copyright 2020 Austin Garlick\n");
 		
-		solve();
+		System.out.println("Solution " + count + " :\n");
+		count++;
 		
+		//The following code formats the grid into a visually appealing grid
         String lineSplit = "";
         StringJoiner splitJoiner = new StringJoiner("+", "|", "|");
         for (int index = 0; index < grid[0].length; index++) {
@@ -117,7 +116,17 @@ public class SudokuSolver {
             System.out.println(lineSplit);
             System.out.println(sj.toString());
         }
-        System.out.println(lineSplit);
+        System.out.println(lineSplit + "\n");
+        
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+		System.out.println("Sudoku Solver 2.1.0 Copyright 2020 Austin Garlick\n");
+		
+		solve();
+
 	}
 	
 }
