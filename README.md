@@ -13,7 +13,7 @@ Just utilizes a global 2d int array and must be manually filled
 
 TODO:
 Takes in a .txt file with a puzzle in the format below
-00
+
 003020600
 900305001
 001806400
